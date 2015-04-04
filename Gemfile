@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-# Add your dependencies here:
+
+gem 'motion-kit'
+gem 'ProMotion'
+gem 'ruby_motion_query'
