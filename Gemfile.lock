@@ -40,6 +40,7 @@ GEM
     cocoapods-try (0.4.3)
     colored (1.2)
     dbt (1.1.5)
+    dotenv (2.0.1)
     escape (0.0.4)
     fuzzy_match (2.0.4)
     i18n (0.7.0)
@@ -50,6 +51,7 @@ GEM
     molinillo (0.2.3)
     motion-cocoapods (1.7.0)
       cocoapods (>= 0.34)
+    motion-env (0.0.4)
     motion-kit (0.17.0)
       dbt (~> 1.1.5)
     motion-require (0.2.0)
@@ -71,6 +73,8 @@ PLATFORMS
 DEPENDENCIES
   ProMotion
   afmotion
+  dotenv
+  motion-env
   motion-kit
   rake
   ruby_motion_query

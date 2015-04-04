@@ -8,7 +8,10 @@ begin
 rescue LoadError
 end
 
+Dotenv.load
+
 Motion::Project::App.setup do |app|
-  # Use `rake config' to see complete project settings.
   app.name = 'rt-ios'
+
+  app.env['RT_API_KEY'] = ENV['RT_API_KEY']
 end
