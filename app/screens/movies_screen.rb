@@ -15,6 +15,9 @@ class MoviesScreen < PM::TableScreen
         {
           title: @movie.title,
           action: :show_movie,
+          properties: {
+            movie: @movie
+          },
           arguments: @movie
         }
       end
@@ -23,6 +26,6 @@ class MoviesScreen < PM::TableScreen
   end
 
   def show_movie(movie)
-    puts movie.title
+    open MovieScreen.new({ movie: movie })
   end
 end
