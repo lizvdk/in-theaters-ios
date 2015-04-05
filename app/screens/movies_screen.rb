@@ -10,11 +10,19 @@ class MoviesScreen < PM::TableScreen
   def on_load
     RT.new.now do |response|
       @movies = response["movies"].map do |movie|
+        @movie = Movie.new(movie)
+
         {
-          title: movie["title"],
+          title: @movie.title,
+          action: :show_movie,
+          arguments: @movie
         }
       end
       update_table_data
     end
+  end
+
+  def show_movie(movie)
+    puts movie.title
   end
 end
